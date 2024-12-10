@@ -1,0 +1,15 @@
+services:
+  webfrontend:
+    image: ${DOCKER_REGISTRY-}webfrontend
+    build:
+      context: .
+      dockerfile: scr/WebFrontEnd/Dockerfile
+
+  mywebapi:
+    image: ${DOCKER_REGISTRY-}mywebapi
+    build:
+      context: .
+      dockerfile: scr/MyWebAPI/Dockerfile
+
+  redis:
+   image: redis
